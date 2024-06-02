@@ -1,0 +1,292 @@
+/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+
+  --primary-text-color: #181820;
+  --secondary-text-color: #5c5c62;
+  --durability-text-color: #6a737d9c;
+  --icon-color: #6a737d;
+  --border-color: #ff9a0045;
+  --text-decoration-color: #ff9a00;
+
+  background-color: #f5f5f5;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 30px;
+  max-width: 900px;
+}
+
+.header,
+.footer {
+  background-color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  border-bottom: 3px solid var(--border-color);
+}
+
+.header-title {
+  color: var(--primary-text-color);
+  text-decoration-color: var(--text-decoration-color);
+  text-decoration-line: underline;
+}
+
+.header-subtitle {
+  color: var(--secondary-text-color);
+}
+
+.main {
+  padding: 30px 0;
+}
+
+.intro,
+.contact-info,
+.skills,
+.experience,
+.education,
+.languages {
+  background-color: #fff;
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+}
+
+.intro-icon-wrapper,
+.contact-info-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro-icon,
+.contact-info-icon {
+  height: 30px;
+  width: 30px;
+}
+
+.intro-text,
+.skills-text,
+.experience-responsibilities,
+.education-item,
+.languages-text {
+  color: var(--secondary-text-color);
+}
+
+.contact-info-header,
+.skills-header,
+.experience-header,
+.education-header,
+.languages-header {
+  color: var(--primary-text-color);
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.contact-info-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.intro,
+.experience-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-info-item {
+  margin-bottom: 15px;
+}
+
+.linkedin-link {
+  color: #0077b5;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.linkedin-link:hover {
+  color: #004d84;
+}
+
+.contact-info-avatar-wrapper {
+  margin-top: 20px;
+}
+
+.contact-info-avatar {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 3px solid var(--text-decoration-color);
+}
+
+.experience-company-header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.experience-duration {
+  display: block;
+  color: var(--durability-text-color);
+  font-size: 0.9em;
+}
+
+.experience-company {
+  color: var(--primary-text-color);
+  text-decoration-color: var(--text-decoration-color);
+  text-decoration-line: underline;
+}
+
+.experience-role {
+  color: var(--durability-text-color);
+  margin-bottom: 10px;
+}
+
+.experience-responsibilities {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.education-duration,
+.education-course,
+.education-institution,
+.languages-text {
+  text-align: center;
+}
+
+.footer p {
+  color: var(--secondary-text-color);
+}
+
+/* Media Queries */
+@media (width <= 575.98px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .header-title {
+    font-size: 1.5em;
+  }
+
+  .header-subtitle {
+    font-size: 1.2em;
+  }
+
+  .contact-info-avatar {
+    width: 80px;
+    height: 80px;
+  }
+
+  .intro-text,
+  .skills-text,
+  .experience-responsibilities,
+  .education-item,
+  .languages-text {
+    font-size: 0.9em;
+  }
+}
+
+@media (576px <= width <= 767.98) {
+  .header-title {
+    font-size: 1.8em;
+  }
+
+  .header-subtitle {
+    font-size: 1.3em;
+  }
+
+  .contact-info-avatar {
+    width: 90px;
+    height: 90px;
+  }
+
+  .intro-text,
+  .skills-text,
+  .experience-responsibilities,
+  .education-item,
+  .languages-text {
+    font-size: 1em;
+  }
+}
+
+@media (768 <= width <= 991.98) {
+  .header-title {
+    font-size: 2em;
+  }
+
+  .header-subtitle {
+    font-size: 1.5em;
+  }
+
+  .contact-info-avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .intro-text,
+  .skills-text,
+  .experience-responsibilities,
+  .education-item,
+  .languages-text {
+    font-size: 1.1em;
+  }
+}
+
+@media (992px <= width <= 1199.98px) {
+  .header-title {
+    font-size: 2.2em;
+  }
+
+  .header-subtitle {
+    font-size: 1.7em;
+  }
+
+  .contact-info-avatar {
+    width: 110px;
+    height: 110px;
+  }
+
+  .intro-text,
+  .skills-text,
+  .experience-responsibilities,
+  .education-item,
+  .languages-text {
+    font-size: 1.2em;
+  }
+}
+
+@media (width >= 1200px) {
+  .header-title {
+    font-size: 2.5em;
+  }
+
+  .header-subtitle {
+    font-size: 2em;
+  }
+
+  .contact-info-avatar {
+    width: 120px;
+    height: 120px;
+  }
+
+  .intro-text,
+  .skills-text,
+  .experience-responsibilities,
+  .education-item,
+  .languages-text {
+    font-size: 1.3em;
+  }
+}
